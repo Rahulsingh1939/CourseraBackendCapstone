@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Capstone Project</title>
+	{% block zhead %}{% endblock zhead %}
+	</head>
+	<body>
+		<div class="container">
+			{% block navbar %} {% endblock %}
+			{% block welcome %} {% endblock %}
+    			{% block messages %}
+    				{% if messages %}
+    					{% for msg in messages %}
+    						<div class="alert alert-{{msg.level_tag}}" role="alert">
+        						{{msg.message}}
+    						</div>
+    					{% endfor %}
+    				{% endif %}
+    			{% endblock %}
+    			{% block body %}
+    			{% endblock %}
+    			{% block content %}
+    			{% endblock %}
+		</div>
+	</body>
+</html>
